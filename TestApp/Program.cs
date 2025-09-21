@@ -2,13 +2,7 @@
 
 namespace AbilityFactory
 {
-    public enum AbilityType
-    {
-        FireStike,
-        Heal,
-        Teleport,
-    }
-
+    public enum AbilityType { FireStike, Heal, Teleport }
     public interface IAbility
     {
         public AbilityType Type { get; }
@@ -90,7 +84,7 @@ namespace AbilityFactory
         static void Main(string[] args)
         {
             IAbility ability = AbilityFactory.GetAbility(AbilityType.FireStike);
-            ability.Use();
+            ability.Use(); // Casting Fire Strike!
         }
     }
 }
